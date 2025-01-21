@@ -8,7 +8,7 @@ const UserAgeDisplay: React.FC = () => {
 
     return (
         <div>
-            <h2>User Age:</h2>
+            <h2>User Age from Redux State:</h2>
             <p>{age}</p>
         </div>
     );

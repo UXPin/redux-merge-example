@@ -4,8 +4,8 @@ module.exports = {
             {
                 name: 'General',
                 include: [
+                    'src/components/ReduxStateEditor.tsx',
                     'src/components/UserAgeDisplay.tsx',
-                    'src/components/UserEditor.tsx',
                     'src/components/UserNameDisplay.tsx',
                 ],
             },

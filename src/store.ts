@@ -7,8 +7,8 @@ interface UserState {
 }
 
 // Initial state for the user
-const initialState: UserState = {
-    name: 'Jan Kowalski',
+export const initialState: UserState = {
+    name: 'John Doe',
     age: 30,
 };
 
@@ -25,11 +25,17 @@ const userSlice = createSlice({
         updateAge: (state, action: PayloadAction<number>) => {
             state.age = action.payload;
         },
+
+        // Updating whole state
+        updateState: (state, action: PayloadAction<UserState>) => {
+            state.name = action.payload.name;
+            state.age = action.payload.age;
+        },
     },
 });
 
 // Export the actions to be used in components
-export const { updateName, updateAge } = userSlice.actions;
+export const { updateName, updateAge, updateState } = userSlice.actions;
 
 // Create the Redux store
 const store = configureStore({
